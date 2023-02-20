@@ -12,7 +12,7 @@ pipeline{
         stage('Clone the repo')
         {
             steps{
-                git 'https://github.com/devops-edu23/samplejavaapp'
+                git 'https://github.com/devops-edu23/samplejavaapp.git'
             }
         }
         stage('Compile the code')
