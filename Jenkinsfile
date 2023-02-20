@@ -1,5 +1,5 @@
 pipeline{
-    
+ // first stage   
     tools{
         jdk 'myjava'
         maven 'mymaven'
@@ -46,11 +46,12 @@ pipeline{
             sh 'mvn package'
             }
         }
-        
+       
          stage('Deploy')
         {
             steps{
-            sh 'docker run -d -P --mount type=bind,src=/root/Addrproj/target,target=/usr/local/tomcat/webapps sampleaddrproj:v1'
+            echo 'in deploy stage'
+            
             }
         }
     }    
