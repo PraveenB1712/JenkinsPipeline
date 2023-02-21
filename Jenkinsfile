@@ -15,7 +15,7 @@ pipeline{
                 git 'https://github.com/devops-edu23/samplejavaapp.git'
             }
         }
-       // compile stage
+       //  compile stage
         stage('Compile the code')
         {
             steps{
