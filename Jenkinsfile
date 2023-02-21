@@ -52,8 +52,8 @@ pipeline{
 	         steps {
               withDockerRegistry(credentialsId: 'DOCKER_HUB_LOGIN', url: 'https://index.docker.io/v1/') {
                     sh script: 'cd  $WORKSPACE'
-                    sh script: 'docker build --file Dockerfile --tag docker.io/lerndevops/samplejavaapp:$BUILD_NUMBER .'
-                    sh script: 'docker push docker.io/lerndevops/samplejavaapp:$BUILD_NUMBER'
+                    sh script: 'docker build --file Dockerfile --tag docker.io/praveenbiradar1/jenkinsjavaapp:$BUILD_NUMBER .'
+                    sh script: 'docker push docker.io/praveenbiradar1/jenkinsjavaapp:$BUILD_NUMBER'
               }	
            }		
         }
